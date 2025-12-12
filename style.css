@@ -109,14 +109,16 @@ button:hover {
     text-align: center;
   }
 
-  .login-box input,
-  .login-box button {
-    width: 100%; /* Makes both input and button the same width */
+.login-box input,
+.login-box button {
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    box-sizing: border-box; /* ensures padding is included in width */
-  }
-
+    box-sizing: border-box;
+    display: block; /* ensures full width */
+    border: 1px solid #ccc; /* match input border */
+    border-radius: 4px; /* optional, match input */
+}
   .login-box img {
     max-width: 150px;
     margin-bottom: 20px;
