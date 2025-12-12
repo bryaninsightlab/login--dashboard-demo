@@ -1,14 +1,10 @@
 {
-    "test@example.com": {
-        "dashboard": "https://lookerstudio.google.com/reporting/86fcf8ec-e2b6-4833-aa6a-241756811010/page/p_n2kykp0xyd",
-        "password": "mypassword123"
-    },
-    "publisher1@mail.com": {
-        "dashboard": "https://lookerstudio.google.com/reporting/abc123/page/p1",
-        "password": "publisher1pass"
-    },
-    "publisher2@mail.com": {
-        "dashboard": "https://lookerstudio.google.com/reporting/abc123/page/p2",
-        "password": "pub2secret"
-    }
+  "test@example.com": {
+    "password": "1234",
+    "dashboard": "https://lookerstudio.google.com/reporting/86fcf8ec-e2b6-4833-aa6a-241756811010/page/p_n2kykp0xyd"
+  },
+  "nopass@example.com": {
+    "password": "",
+    "dashboard": "https://lookerstudio.google.com/reporting/example-dashboard-link-for-nopass"
+  }
 }
