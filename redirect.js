@@ -13,27 +13,16 @@ document.getElementById("loginForm").addEventListener("submit", function(e){
 
     const user = userDashboards[email];
 
-    // If email doesn't exist
     if(!user){
-        document.getElementById("error-msg").innerText = "Invalid email or no dashboard assigned.";
+        document.getElementById("error-msg").innerText = "Invalid email.";
         return;
     }
 
-    // If user is object → password is required
-    if(typeof user === "object"){
-        if(!password){
-            document.getElementById("error-msg").innerText = "Password required.";
-            return;
-        }
-        if(password !== user.password){
-            document.getElementById("error-msg").innerText = "Incorrect password.";
-            return;
-        }
-        window.location.href = user.dashboard;
+    if(password !== user.password){
+        document.getElementById("error-msg").innerText = "Incorrect password.";
+        return;
     }
 
-    // If user is a string → email-only login
-    else if(typeof user === "string"){
-        window.location.href = user;
-    }
+    // Correct email & password
+    window.location.href = user.dashboard;
 });
