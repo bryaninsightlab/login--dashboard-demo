@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Login</h2>
+  <form id="loginForm">
+    <input type="email" id="email" placeholder="Email" required><br>
+    <input type="password" id="password" placeholder="Password" required><br>
+    <button type="submit">Login</button>
+  </form>
+
+  <script>
+    const users = {
+      "publisher1@example.com": "dashboard1.html",
+      "publisher2@example.com": "dashboard2.html"
+    };
+
+    document.getElementById("loginForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      // In real system: validate password
+      if(users[email]){
+        window.location.href = users[email]; // redirect to dashboard
+      } else {
+        alert("Email not recognized");
+      }
+    });
+  </script>
+</body>
+</html>
