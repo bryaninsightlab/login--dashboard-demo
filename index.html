@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Publisher Login</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publisher Login</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="login-container">
+  <div class="login-box">
     <!-- Logo -->
-    <img src="Adboost Logo.jpg" alt="Company Logo" class="logo">
-
-    <!-- Login Text -->
-    <h2>Publisher Login</h2>
+    <img src="logo.jpg" alt="Company Logo">
 
     <!-- Login Form -->
     <form id="loginForm">
-        <input type="email" id="email" placeholder="Email" required>
-        <input type="password" id="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-        <p id="error-msg" style="color:red;"></p>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password (optional)">
+      <button type="submit">Login</button>
     </form>
-</div>
 
-<script src="redirect.js"></script>
+    <!-- Error message -->
+    <div id="error-msg"></div>
+  </div>
+
+  <script src="redirect.js"></script>
 </body>
 </html>
