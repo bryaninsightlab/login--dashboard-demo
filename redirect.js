@@ -1,9 +1,9 @@
 let userDashboards = {};
 
-fetch("dashboards.json")
+fetch("dashboard.json")
     .then(response => response.json())
     .then(data => userDashboards = data)
-    .catch(err => console.error("Failed to load dashboards.json", err));
+    .catch(err => console.error("Failed to load dashboard.json", err));
 
 document.getElementById("loginForm").addEventListener("submit", function(e){
     e.preventDefault();
