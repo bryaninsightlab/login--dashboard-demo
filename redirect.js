@@ -1,13 +1,15 @@
-const userDashboards = {
-    "publisher1@example.com": "https://lookerstudio.google.com/reporting/abc123/page/xyz?params=%7B%22ds0.publisher_name%22:%22Publisher1%22%7D",
-    "publisher2@example.com": "https://lookerstudio.google.com/reporting/abc123/page/xyz?params=%7B%22ds0.publisher_name%22:%22Publisher2%22%7D"
-};
+let userDashboards = {};
+
+fetch("dashboards.json")
+    .then(response => response.json())
+    .then(data => userDashboards = data)
+    .catch(err => console.error("Failed to load dashboards.json", err));
 
 document.getElementById("loginForm").addEventListener("submit", function(e){
     e.preventDefault();
     
     const email = document.getElementById("email").value.toLowerCase();
-    const password = document.getElementById("password").value; // optional: validate later
+    const password = document.getElementById("password").value; // optional
     
     if(userDashboards[email]){
         window.location.href = userDashboards[email];
