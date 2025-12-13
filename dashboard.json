@@ -4,7 +4,7 @@
     "dashboard": "https://lookerstudio.google.com/reporting/86fcf8ec-e2b6-4833-aa6a-241756811010/page/p_n2kykp0xyd"
   },
   "nopass@example.com": {
-    "password": "",
+    "password": "123456",
     "dashboard": "https://lookerstudio.google.com/reporting/86fcf8ec-e2b6-4833-aa6a-241756811010/page/p_n2kykp0xyd"
   }
 }
